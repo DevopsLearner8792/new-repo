@@ -1,0 +1,6 @@
+new file in new-repo from local git
+get 
+ready
+for
+push into
+remote repo
