@@ -1,0 +1,106 @@
+Main Memory-->Ram,cache
+Secondary memory-->ssd,hdd
+Flash memory--->usb drive,memory cards
+
+   Database:
+       --->SSD
+  Frequent Searches:
+       Online shoppoing-->flipkart,amazon
+       search for item or product--->secondary storage device
+        search the same item-->cache
+
+       100 read operations
+            ssd--->10min     disk access read ,search different sectors
+            cache,ram--->2 min
+
+Storage:
+   Memcache:
+        data
+          key-value pair
+          productid-->product name 
+
+         product name--->product id
+
+    cache--->items   for a session
+         item1--->5 min
+         item2--->4 min
+         item3--->10 min
+                             1000 pages--->locate topic    index;    topic pageno
+     Sequntial search--->
+     Random Search--->
+
+    donwloading 1 gb file from internet--->more   ssd
+    copying 1 gb file into local disk-->less     cache
+
+   Reuest---Response cycle:
+    ssd------------->10 seconds
+    elastic cache---->2 seconds
+
+
+
+
+   Redis Cache:
+       1.Go to Ec2 instance
+       2.Create Linux or Ubuntu EC2
+       3.Update the EC2 instance
+       4.Install Redis client on EC2
+       5.Create Redis Cluster
+       6.Copy the "End Point" of Cluster
+       7.Use Endpoint in EC2 to connect with Redis cluster
+       8.Redis Database launched in your EC2 Instance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
