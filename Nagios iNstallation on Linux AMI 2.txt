@@ -1,0 +1,45 @@
+ clearr
+    2  clea
+    3  clear
+    4  sudo yum update -y
+    5  sudo yum install httpd php
+    6  sudo yum install gcc glibc glibc-common
+    7  sudo yum install gd gd-devel
+    8  sudo adduser -m nagios
+    9  sudo passwd nagios
+   10  sudo groupadd nagcmd
+   11  sudo usermod -a -G nagcmd nagios
+   12  sudo usermod -a -G nagcmd apache
+   13  mkdir ~/downloads
+   14  cd ~/downloads
+   15  c;ear
+   16  clear
+   17  wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-4.0.8.tar.gz
+   18  wget http://nagios-plugins.org/download/nagios-plugins-2.0.3.tar.gz
+   19  tar zxvf nagios-4.0.8.tar.gz
+   20  cd nagios-4.0.8
+   21  ls
+   22  ./configure --with-command-group=nagcmd
+   23  make all
+   24  sudo make install
+   25  sudo make install-init
+   26  sudo make install-config
+   27  sudo make install-commandmode
+   28  sudo vim /usr/local/nagios/etc/objects/contacts.cfg
+   29  sudo make install-webconf
+   30  sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+   31  sudo service httpd restart
+   32  ls
+   33  cd ..
+   34  cd ~/downloads
+   35  tar zxvf nagios-plugins-2.0.3.tar.gz
+   36  cd nagios-plugins-2.0.3
+   37  ./configure --with-nagios-user=nagios --with-nagios-group=nagios
+   38  make
+   39  sudo make install
+   40  sudo chkconfig --add nagios
+   41  sudo chkconfig nagios on
+   42  sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   43  sudo service nagios start
+   44  clear
+   45  history
